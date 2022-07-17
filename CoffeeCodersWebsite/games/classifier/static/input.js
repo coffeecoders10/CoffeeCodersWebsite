@@ -62,7 +62,7 @@
     if(files.length == 1){
       var fileInput = document.querySelector('.input');
       fileInput.files = files;
-        if(files[0].type.indexOf('application/vnd.ms-excel') === 0) {
+        if(files[0].type.indexOf('text/csv') === 0) {
           // console.log(fileInput.files);
           var disp = document.querySelector('.disp');
           disp.innerHTML = '<p style="font-size:40px">'+files[0].name+'</p>';
