@@ -126,6 +126,7 @@ ALLOWED_HOSTS = ['*']
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'pictionary/static'),
     os.path.join(BASE_DIR, 'classifier/static'),

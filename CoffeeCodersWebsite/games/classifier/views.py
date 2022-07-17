@@ -35,6 +35,8 @@ from io import StringIO, BytesIO
 from django.contrib.auth.models import User
 from django.contrib.sessions.models import Session
 from django.utils import timezone
+# from django.templatetags.static import static
+from django.conf.urls.static import static
 
 clfa = LogisticRegression(random_state = 42)
 clfb = SVC(random_state = 912, kernel = 'rbf')
@@ -101,7 +103,7 @@ def training(clf,xtrain, xtest, ytrain, ytest,name,name2,sk):
     t0 = time.clock()
     cl = clf.fit(xtrain,ytrain)
     model = cl
-    path = './classifier/media/models/'
+    path = settings.STATICFILES_DIRS[2] + '/models/'
     filename = path + name + "_" + sk + "_" +'model.sav'
     pickle.dump(model, open(filename, 'wb'))
     t1 = time.clock()
@@ -167,7 +169,7 @@ def train_model(end, attr, classifier, train, test, data, sk):
             report = training(clfc,xtrain, xtest, ytrain, ytest,i,"XGB", sk)
             classification_report.append(report)
             accr.append(report[2])
-    path = './classifier/media/models/'
+    path = settings.STATICFILES_DIRS[2] + '/models/'
     filename = path + sk + "_" +'scaler.pkl'
     dump(scaler, open(filename, 'wb'))
     pred_req = []
@@ -178,11 +180,11 @@ def train_model(end, attr, classifier, train, test, data, sk):
 
 def load_model(sk, name):
     models = []
-    path = './classifier/media/models/'
+    path = settings.STATICFILES_DIRS[2] + '/models/'
     filename = path + sk + "_" +'scaler.pkl'
     scaler = load(open(filename, 'rb'))
     for i in name:
-        path = './classifier/media/models/'
+        path = settings.STATICFILES_DIRS[2] + '/models/'
         filename = path + i + "_" + sk + "_" +'model.sav'
         loaded_model = pickle.load(open(filename, 'rb'))
         models.append(loaded_model)
@@ -222,17 +224,17 @@ def home(request):
             if demo != "" :
                 demo = demo + ".csv"
                 og_name = demo
-                data = pd.read_csv("./classifier/media/demo_data/" + demo, encoding='latin1')
+                data = pd.read_csv(settings.STATICFILES_DIRS[2] + "/demo_data/" + demo, encoding='latin1')
                 request.session['data'] = data.to_json()
                 return HttpResponseRedirect("select/?file="+og_name)
             file = request.FILES['file']
             fs = FileSystemStorage(location='classifier/media/user_data/')
             name = "user_file." + file.name.split(".")[-1]
             og_name = file.name
-            dir = listdir('./classifier/media/user_data/')
+            dir = listdir(settings.STATICFILES_DIRS[2] + '/user_data/')
             [fs.delete(i) for i in dir]
             filename = fs.save(name, file)
-            data = pd.read_csv("./classifier/media/user_data/"+filename, encoding='latin1')
+            data = pd.read_csv(settings.STATICFILES_DIRS[2] + "/user_data/"+ filename, encoding='latin1')
             request.session['data'] = data.to_json()
             return HttpResponseRedirect("select/?file="+og_name)
     if 'data' in request.session:
@@ -437,7 +439,7 @@ def result(request):
             if PF.is_valid():
                 start = PF.cleaned_data['start']
                 if start == "down":
-                        path = './classifier/media/models/'
+                        path = settings.STATICFILES_DIRS[2] + '/models/'
                         classifier = request.session['classifier']
                         classifier = re.findall(r"\'(.+?)\'", classifier)
                         sk = str(request.session.session_key)
