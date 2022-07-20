@@ -131,4 +131,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'pictionary/static'),
     os.path.join(BASE_DIR, 'classifier/static'),
     os.path.join(BASE_DIR, 'classifier/media'),
+    os.path.join(BASE_DIR, 'index/static'),
 ]
