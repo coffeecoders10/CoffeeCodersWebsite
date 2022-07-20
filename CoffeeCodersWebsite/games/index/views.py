@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.templatetags.static import static
 
+def ccadmin(request):
+    return render(request,'index/admin.html')
+
 def index(request):
     data = {
     'live_projects' : [
