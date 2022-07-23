@@ -68,12 +68,12 @@
           {% for project in live_projects %}
           <div class="col-md-2">
            <div class="menu-entry">
-             <a href="#" class="img" style="background-image: url({{project.img}});"></a>
+             <a href="#" class="img" style="background-image: url(https://drive.google.com/uc?export=view&id={{project.img}});"></a>
              <div class="text text-center pt-4">
                <h3><a href="#">{{project.name}}</a></h3>
                <p>{{project.desc}}</p>
                <!-- <p class="price"><span>$5.90</span></p> -->
-               <p><a href="{{project.link}}" class="btn btn-primary btn-outline-primary">Open Page</a></p>
+               <p><a href="{{project.link}}" class="btn btn-primary btn-outline-primary" target="_blank">Open Page</a></p>
              </div>
            </div>
          </div>
@@ -159,7 +159,7 @@
                         <p>{{proj.desc}}</p>
                         <p class="text-uppercase font-weight-bold">{{proj.topic}}</p>
                       </div>
-                      <p><a href="{{proj.link}}" class="btn btn-primary btn-outline-primary">Open Page</a></p>
+                      <p><a href="{{proj.link}}" class="btn btn-primary btn-outline-primary" target="_blank">Open Page</a></p>
                     </div>      
                   </div>
                   {% endfor %}

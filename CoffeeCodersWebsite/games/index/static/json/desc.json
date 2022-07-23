@@ -3,88 +3,65 @@
         {
             "name": "Pictionary",
             "desc": "The Game of Pictionary in a online medium",
-            "img": "images/menu-1.jpg",
-            "link": "/abc"
+            "img": "1U1IOXg5WVPvZmcrG-y2jcQ0Gr0jwhHNP",
+            "link": "http://coffeecoders.pythonanywhere.com/pictionary/"
         },
         {
-            "name": "Pictionary2",
-            "desc": "The Game of Pictionary in a online medium",
-            "img": "images/menu-1.jpg",
-            "link": "/abc"
+            "name": "Classifier Bot",
+            "desc": "Bot developed to train and test different classifiers on your given data",
+            "img": "1B1QuLAIxK61SnSqnQQHunOxJC2pD4o3j",
+            "link": "http://coffeecoders.pythonanywhere.com/classifier/"
         },
         {
-            "name": "Pictionary3",
-            "desc": "The Game of Pictionary in a online medium",
-            "img": "images/menu-1.jpg",
-            "link": "/abssssc"
+            "name": "Rock-Paper-Scissors",
+            "desc": "Chat Application with simple Rock Paper Scissors game invluded",
+            "img": "1B1QuLAIxK61SnSqnQQHunOxJC2pD4o3j",
+            "link": "http://chat-rps.herokuapp.com/"
+        },
+        {
+            "name": "Kivy Mobile Applications",
+            "desc": "Easy Basic mobile applications coded in Python - Kivy",
+            "img": "1B1QuLAIxK61SnSqnQQHunOxJC2pD4o3j",
+            "link": "https://drive.google.com/drive/folders/1z-NCD8Vv5ptaEp8kKLXKwYx9ojpqEvf4?usp=sharing"
         }
     ],
     "numbers": {
         "years": "2",
-        "live": "3",
-        "total": "10"
+        "live": "4",
+        "total": "8"
     },
     "git_projects": [
-        [
-            {
-                "name": "Japenese-English Translator",
-                "desc": "Application that Converts Japanese text to English comprehension.",
-                "topic": "Natural Language Processing",
-                "link": "/abcd",
-                "icon": "fa fa-battery-full"
-            },
-            {
-                "name": "Japenese-English Translator",
-                "desc": "Application that Converts Japanese text to English comprehension.",
-                "topic": "Natural Language Processing",
-                "link": "/abcd",
-                "icon": "fa fa-battery-full"
-            },
-            {
-                "name": "Japenese-English Translator",
-                "desc": "Application that Converts Japanese text to English comprehension.",
-                "topic": "Natural Language Processing",
-                "link": "/abcd",
-                "icon": "fa fa-battery-full"
-            },
-            {
-                "name": "Japenese-English Translator",
-                "desc": "Application that Converts Japanese text to English comprehension.",
-                "topic": "Natural Language Processing",
-                "link": "/abcd",
-                "icon": "fa fa-battery-full"
-            }
-        ],
-        [
-            {
-                "name": "Japenese-English Translator22",
-                "desc": "Application that Converts Japanese text to English comprehension.",
-                "topic": "Natural Language Processing",
-                "link": "/abcd",
-                "icon": "fa fa-battery-full"
-            },
-            {
-                "name": "Japenese-English Translator22",
-                "desc": "Application that Converts Japanese text to English comprehension.",
-                "topic": "Natural Language Processing",
-                "link": "/abcd",
-                "icon": "fa fa-battery-full"
-            },
-            {
-                "name": "Japenese-English Translator22",
-                "desc": "Application that Converts Japanese text to English comprehension.",
-                "topic": "Natural Language Processing",
-                "link": "/abcd",
-                "icon": "fa fa-battery-full"
-            },
-            {
-                "name": "Japenese-English Translator22",
-                "desc": "Application that Converts Japanese text to English comprehension.",
-                "topic": "Natural Language Processing",
-                "link": "/abcd",
-                "icon": "fa fa-battery-full"
-            }
-        ]
+      [
+        {
+            "name": "Japenese-English Translator",
+            "desc": "Application that Converts Japanese text to English comprehension.",
+            "topic": "Natural Language Processing",
+            "link": "https://github.com/coffeecoders10/JapaneseEnglishTranslator",
+            "icon": "fa fa-volume-up"
+        },
+        {
+            "name": "Fake Review Analysis",
+            "desc": "Application that recogises fake product reviews and performs sentimental analysis.",
+            "topic": "Machine Learning",
+            "link": "https://github.com/coffeecoders10/FakeReviewAnalysis",
+            "icon": "fa fa-times-rectangle-o"
+        },
+        {
+            "name": "Institute Feedback System",
+            "desc": "Complete system to gather and analyse student feedback for an institute",
+            "topic": "Web Development",
+            "link": "https://github.com/coffeecoders10/FeedbackRGIT",
+            "icon": "fa fa-comments-o"
+        },
+        {
+            "name": "Hospital Management System",
+            "desc": "System to monitor hospital status while storing and managing records",
+            "topic": "Web Development",
+            "link": "https://github.com/coffeecoders10/HospitalManagement",
+            "icon": "fa fa-medkit"
+        }
+      ]
+        
     ],
     "story": {
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -98,10 +75,10 @@
             "link": "nitishtalekar.pythonanywhere.com"
         },
         {
-            "name": "Nitish Talekar",
-            "desc": "MS in CS from NCSU",
-            "img": "images/nitish-profile.jpg",
-            "link": "nitishtalekar.pythonanywhere.com"
+            "name": "Sarvesh Wanode",
+            "desc": "ME from BITS Pilani Hyd",
+            "img": "images/sarvesh-profile.jpg",
+            "link": "wsarvesh.pythonanywhere.com"
         }
     ],
     "description": {

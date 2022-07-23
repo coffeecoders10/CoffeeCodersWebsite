@@ -31,8 +31,8 @@ def index(request):
         data = json.load(json_file)
     # print(data)
 
-    for i in data['live_projects']:
-        i['img'] = static(i['img'])
+    # for i in data['live_projects']:
+    #     i['img'] = static(i['img'])
 
     data['story']['image'] = static(data['story']['image'])
 
