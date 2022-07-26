@@ -31,40 +31,39 @@
         "total": "8"
     },
     "git_projects": [
-      [
-        {
-            "name": "Japenese-English Translator",
-            "desc": "Application that Converts Japanese text to English comprehension.",
-            "topic": "Natural Language Processing",
-            "link": "https://github.com/coffeecoders10/JapaneseEnglishTranslator",
-            "icon": "fa fa-volume-up"
-        },
-        {
-            "name": "Fake Review Analysis",
-            "desc": "Application that recogises fake product reviews and performs sentimental analysis.",
-            "topic": "Machine Learning",
-            "link": "https://github.com/coffeecoders10/FakeReviewAnalysis",
-            "icon": "fa fa-times-rectangle-o"
-        },
-        {
-            "name": "Institute Feedback System",
-            "desc": "Complete system to gather and analyse student feedback for an institute",
-            "topic": "Web Development",
-            "link": "https://github.com/coffeecoders10/FeedbackRGIT",
-            "icon": "fa fa-comments-o"
-        },
-        {
-            "name": "Hospital Management System",
-            "desc": "System to monitor hospital status while storing and managing records",
-            "topic": "Web Development",
-            "link": "https://github.com/coffeecoders10/HospitalManagement",
-            "icon": "fa fa-medkit"
-        }
-      ]
-        
+        [
+            {
+                "name": "Japenese-English Translator",
+                "desc": "Application that Converts Japanese text to English comprehension.",
+                "topic": "Natural Language Processing",
+                "link": "https://github.com/coffeecoders10/JapaneseEnglishTranslator",
+                "icon": "fa fa-volume-up"
+            },
+            {
+                "name": "Fake Review Analysis",
+                "desc": "Application that recogises fake product reviews and performs sentimental analysis.",
+                "topic": "Machine Learning",
+                "link": "https://github.com/coffeecoders10/FakeReviewAnalysis",
+                "icon": "fa fa-times-rectangle-o"
+            },
+            {
+                "name": "Institute Feedback System",
+                "desc": "Complete system to gather and analyse student feedback for an institute",
+                "topic": "Web Development",
+                "link": "https://github.com/coffeecoders10/FeedbackRGIT",
+                "icon": "fa fa-comments-o"
+            },
+            {
+                "name": "Hospital Management System",
+                "desc": "System to monitor hospital status while storing and managing records",
+                "topic": "Web Development",
+                "link": "https://github.com/coffeecoders10/HospitalManagement",
+                "icon": "fa fa-medkit"
+            }
+        ]
     ],
     "story": {
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "desc": "In 2018, both of us met for the first time in college. As years passed, project after project, we realized that our coding ethics and habits were inherently coordinated. As the Pandemic of 2020 hit, we had already worked of small scale projects throughout the semesters. The Pandemic gave us enough time to fool around with projects that interested us. Soon we developed project after project. We decided we needed a platform to store and recognize our work. And that is how CoffeeCoders came into existence.",
         "image": "images/big-logo.png"
     },
     "members": [
@@ -82,8 +81,8 @@
         }
     ],
     "description": {
-        "addr": "India - USA",
+        "addr": "Maharashtra, India / North Carolina, USA",
         "mail": "coffeecoders10@gmail.com",
-        "github": "link"
+        "github": "https://github.com/coffeecoders10"
     }
 }
