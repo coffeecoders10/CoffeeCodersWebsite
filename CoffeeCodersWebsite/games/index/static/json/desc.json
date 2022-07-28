@@ -71,13 +71,13 @@
             "name": "Nitish Talekar",
             "desc": "MS in CS from NCSU",
             "img": "images/nitish-profile.jpg",
-            "link": "nitishtalekar.pythonanywhere.com"
+            "link": "https://nitishtalekar.pythonanywhere.com/"
         },
         {
             "name": "Sarvesh Wanode",
-            "desc": "ME from BITS Pilani Hyd",
+            "desc": "ME in CS from BITS Pilani Hyd",
             "img": "images/sarvesh-profile.jpg",
-            "link": "wsarvesh.pythonanywhere.com"
+            "link": "https://wsarvesh.pythonanywhere.com/"
         }
     ],
     "description": {
