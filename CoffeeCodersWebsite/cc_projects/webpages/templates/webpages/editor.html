@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Editor</title>
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
+  <!-- CodeMirror Theme (choose one) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/theme/dracula.min.css">
+  <!-- CodeMirror JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.js"></script>
+  <!-- CodeMirror Modes (choose languages you want to support) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/htmlmixed/htmlmixed.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/xml/xml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/javascript/javascript.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/css/css.js"></script>
+  
+</head>
+<body>
+
+    <textarea id="codeEditor"></textarea>
+  
+
+  <!-- CodeMirror Initialization -->
+  <script>
+    // Initialize CodeMirror
+    var codeEditor = CodeMirror.fromTextArea(document.getElementById("codeEditor"), {
+      lineNumbers: true,  // Display line numbers
+      mode: "htmlmixed",  // Specify the initial language mode
+      theme: "dracula"     // Choose a theme (you can change it)
+    });
+    codeEditor.setSize("100%", "90vh");
+  </script>
+
+</body>
+</html>

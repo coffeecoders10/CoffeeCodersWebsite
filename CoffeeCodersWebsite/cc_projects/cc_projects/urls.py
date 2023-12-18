@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('pictionary/',include("pictionary.urls")),
     path('classifier/',include("classifier.urls")),
+    path('webpages/',include("webpages.urls")),
     path('',include("index.urls"))
 ]
