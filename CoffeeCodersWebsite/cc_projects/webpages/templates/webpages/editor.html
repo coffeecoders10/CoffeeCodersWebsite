@@ -37,13 +37,18 @@
           <div class="row container-fluid">
             <div class="d-flex align-items-center justify-content-between mt-3">
               <h3 class="h4 mb-4">Webpage Name</h3>
-              <button class="btn btn-primary" type="submit">Preview</button>
+              <a target="_blank" href="{% url 'webpage'  %}">
+              <button class="btn btn-primary">Preview</button>
+              </a>
             </div>
-
-            <textarea id="codeEditor"></textarea>
-            <div class="d-flex justify-content-end mt-3">
-              <button class="btn btn-primary" type="submit">Save</button>
-            </div>
+            {{code}}
+            <form action="{% url 'editor' %}" method="post">
+              {% csrf_token %}
+              <textarea id="codeEditor" name="code">{{code}}</textarea>
+              <div class="d-flex justify-content-end mt-3">
+                <button class="btn btn-primary" type="submit">Save</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
