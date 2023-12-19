@@ -1,71 +1,82 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <!-- Bootstrap CSS Link (optional) -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Webpages</title>
+
+  {% include './elements/headers.html' %}
+
+  <style media="screen">
+    :root {
+      --primary-color: #c49b63;
+    }
+  </style>
 </head>
+
 <body>
-
-  <div class="container mt-5">
-    <!-- First Form -->
-    <form id="firstForm">
-      <div class="form-group">
-        <label for="passwordField">Password:</label>
-        <input type="password" class="form-control" id="passwordField" placeholder="Enter password" required>
-      </div>
-      
-      <div id="edit" style="display:none">
-        <div class="form-group">
-          <label for="selectOption">Select Option:</label>
-          <select class="form-control" id="selectOption" required>
-            <option value="" disabled selected>Select an option</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <!-- Add more options as needed -->
-          </select>
+  <div class="d-flex align-items-stretch">
+    <div class="page-content form-page">
+      <div class="bg-dash-dark-2 py-4">
+        <div class="container-fluid">
+          <h2 class="h5 mb-0">Single Webpage Admin</h2>
         </div>
-        
-        <button type="button" class="btn btn-success">Edit Now</button>
       </div>
-      
-      
-      
-      <div id="create" style="display:none">
-        <div class="form-group">
-          <label for="inputField">Input:</label>
-          <input type="text" class="form-control" id="inputField" placeholder="Enter something" required>
+      <div class="container-fluid py-2">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 py-3 px-0">
+          </ol>
+        </nav>
+      </div>
+      <section class="pt-0">
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height:75vh">
+          <div class="row gy-4 container-fluid">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="h4 mb-0">Webpages</h3>
+                </div>
+                <div class="card-body pt-0">
+                  <p class="text-sm">Create or Edit Webpages</p>
+                  <form>
+                    <div class="mb-2">
+                      <label class="form-label" for="exampleInputPassword1">Password</label>
+                      <input class="form-control" id="exampleInputPassword1" type="password">
+                    </div>
+                    <div class="row">
+                      <div class="col-6 create-pages mt-3">
+                        <div class="mb-3">
+                          <label class="form-label" for="exampleInputPassword1">Webpage Name</label>
+                          <input class="form-control" id="exampleInputPassword1" type="text">
+                        </div>
+                        <div class="col-lg d-flex justify-content-end">
+                          <button class="btn btn-primary" type="submit">Create</button>
+                        </div>
+                      </div>
+                      <div class="col-6 edit-pages mt-3">
+                        <label class="form-label" for="exampleInputPassword1">Choose Webpage</label>
+                        <select class="form-control bg-dark optSelect">
+                          <option selected>Choose...</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <div class="col-lg d-flex justify-content-end">
+                          <button class="btn btn-primary" type="submit">Edit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <button type="button" class="btn btn-success">Create Now</button>
-      </div>
-    </form>
-
-
-    <!-- Create Button -->
-    <button type="button" class="btn btn-info mt-3" onclick="create()">Create</button>
-    <button type="button" class="btn btn-info mt-3" onclick="edit()">Edit</button>
+      </section>
+    </div>
   </div>
 
-  <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <script>
-    function create() {
-      // Toggle the display property of the second form
-      var create = document.getElementById("create");
-      create.style.display = create.style.display === "none" ? "block" : "none";
-    }
-    
-    function edit() {
-      // Toggle the display property of the second form
-      var edit = document.getElementById("edit");
-      edit.style.display = edit.style.display === "none" ? "block" : "none";
-    }
-  </script>
 </body>
+
 </html>

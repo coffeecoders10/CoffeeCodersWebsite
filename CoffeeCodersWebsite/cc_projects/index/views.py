@@ -4,7 +4,7 @@ import json
 from django.conf import settings
 
 def ccadmin(request):
-    with open(settings.STATICFILES_DIRS[3] + "/json/desc.json") as json_file:
+    with open(settings.STATICFILES_DIRS[-1] + "/json/desc.json") as json_file:
         data = json.load(json_file)
 
     # print(data)
@@ -17,7 +17,7 @@ def ccadmin(request):
         data[form_key] = form_value
         json_object = json.dumps(data, indent = 4)
 
-        file_name = settings.STATICFILES_DIRS[3] + "/json/desc.json"
+        file_name = settings.STATICFILES_DIRS[-1] + "/json/desc.json"
         with open(file_name, "w") as outfile:
             outfile.write(json_object)
             
@@ -27,7 +27,7 @@ def ccadmin(request):
     return render(request,'index/admin.html', {'data': data})
 
 def index(request):
-    with open(settings.STATICFILES_DIRS[3] + "/json/desc.json") as json_file:
+    with open(settings.STATICFILES_DIRS[-1] + "/json/desc.json") as json_file:
         data = json.load(json_file)
     # print(data)
 

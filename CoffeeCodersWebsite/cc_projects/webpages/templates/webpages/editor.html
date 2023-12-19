@@ -1,37 +1,57 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Editor</title>
-  <!-- CodeMirror CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
-  <!-- CodeMirror Theme (choose one) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/theme/dracula.min.css">
-  <!-- CodeMirror JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.js"></script>
-  <!-- CodeMirror Modes (choose languages you want to support) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/htmlmixed/htmlmixed.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/xml/xml.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/javascript/javascript.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/css/css.js"></script>
-  
+  {% include './elements/headers.html' %}
+
+  <style media="screen">
+    :root {
+      --primary-color: #c49b63;
+    }
+  </style>
 </head>
+
 <body>
 
-    <textarea id="codeEditor"></textarea>
-  
+  <div class="d-flex align-items-stretch">
+    <div class="page-content form-page">
+      <div class="bg-dash-dark-2 py-4">
+        <div class="container-fluid">
+          <h2 class="h5 mb-0">CoffeeCoders Logo</h2>
+        </div>
+      </div>
+      <div class="container-fluid py-2">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 py-3 px-0">
+          </ol>
+        </nav>
+      </div>
+      <section class="pt-0">
 
-  <!-- CodeMirror Initialization -->
-  <script>
-    // Initialize CodeMirror
-    var codeEditor = CodeMirror.fromTextArea(document.getElementById("codeEditor"), {
-      lineNumbers: true,  // Display line numbers
-      mode: "htmlmixed",  // Specify the initial language mode
-      theme: "dracula"     // Choose a theme (you can change it)
-    });
-    codeEditor.setSize("100%", "90vh");
-  </script>
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+          <div class="row container-fluid">
+            <div class="d-flex align-items-center justify-content-between mt-3">
+              <h3 class="h4 mb-4">Webpage Name</h3>
+              <button class="btn btn-primary" type="submit">Preview</button>
+            </div>
+
+            <textarea id="codeEditor"></textarea>
+            <div class="d-flex justify-content-end mt-3">
+              <button class="btn btn-primary" type="submit">Save</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  {% include './elements/scripts.html' %}
 
 </body>
+
 </html>
