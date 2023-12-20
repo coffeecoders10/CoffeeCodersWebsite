@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Webpages
 from django.http import HttpResponse, HttpResponseRedirect
 from bs4 import BeautifulSoup
-
+import re
 # Create your views here.
 
 def login(request):
@@ -35,13 +35,20 @@ def login(request):
 
 def editor(request):
     if request.method == "POST":
-        curr_webpage = request.session["curr_webpage"]
-        webpage = Webpages.objects.filter(name=curr_webpage)
-        code = request.POST.get('code')
-        soup = BeautifulSoup(code, 'html.parser')
-        html = soup.prettify()
-        with open(webpage[0].path, 'w') as file:
-            file.write(html)
+        next = request.POST.get('next')
+        if next == "save":
+            curr_webpage = request.session["curr_webpage"]
+            webpage = Webpages.objects.filter(name=curr_webpage)
+            code = request.POST.get('code')
+            soup = BeautifulSoup(code, 'html.parser')
+            html = soup.prettify()
+            with open(webpage[0].path, 'w') as file:
+                file.write(html)
+        else:
+            webpage = Webpages.objects.filter(name=next)[0]
+            webpage.delete()
+            request.session.pop('curr_webpage')
+            return HttpResponseRedirect('/webpages')
     curr_webpage = request.session["curr_webpage"]
     webpage = Webpages.objects.filter(name=curr_webpage)
     print(webpage, webpage[0].path)
@@ -50,12 +57,16 @@ def editor(request):
             code = file.read()
             print(code)
     except:
-        return render(request,'webpages/editor.html')
+        return render(request,'webpages/editor.html', {"webpage_name": curr_webpage})
+    code = re.sub(r'\n+', '\n', code)
     soup = BeautifulSoup(code, 'html.parser')
     html = soup.prettify()
-    return render(request,'webpages/editor.html', {"code": html})
+    return render(request,'webpages/editor.html', {"code": html, "webpage_name": curr_webpage})
 
 def webpage(request):
-    curr_webpage = request.session["curr_webpage"]
+    if 'curr_webpage' in request.session:
+        curr_webpage = request.session["curr_webpage"]
+    else:
+        curr_webpage = request.GET.get('page', '')
     webpage = Webpages.objects.filter(name=curr_webpage)
     return render(request, webpage[0].render_path)
