@@ -42,8 +42,8 @@
                   <form action="{% url 'login' %}" method="post">
                     {% csrf_token %}
                     <div class="mb-2">
-                      <label class="form-label" for="exampleInputPassword1">Password</label>
-                      <input class="form-control" id="exampleInputPassword1" name="password" type="password">
+                      <label class="form-label" for="InputPassword" required>Password</label>
+                      <input class="form-control" id="InputPassword" name="password" type="password">
                     </div>
                     <div class="row">
                       <div class="col-6 create-pages mt-3">
@@ -66,7 +66,7 @@
                           <option value="2">Two</option>
                           <option value="3">Three</option> -->
                         </select>
-                        <div class="col-lg d-flex justify-content-end">
+                        <div class="col-lg d-flex justify-content-end mt-3">
                           <button class="btn btn-primary" type="submit" name="next" value="edit">Edit</button>
                         </div>
                       </div>

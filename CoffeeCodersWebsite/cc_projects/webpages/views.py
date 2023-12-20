@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Webpages
 from django.http import HttpResponse, HttpResponseRedirect
+from bs4 import BeautifulSoup
 
 # Create your views here.
 
@@ -37,9 +38,10 @@ def editor(request):
         curr_webpage = request.session["curr_webpage"]
         webpage = Webpages.objects.filter(name=curr_webpage)
         code = request.POST.get('code')
-        print(code)
+        soup = BeautifulSoup(code, 'html.parser')
+        html = soup.prettify()
         with open(webpage[0].path, 'w') as file:
-            file.write(code)
+            file.write(html)
     curr_webpage = request.session["curr_webpage"]
     webpage = Webpages.objects.filter(name=curr_webpage)
     print(webpage, webpage[0].path)
@@ -49,8 +51,9 @@ def editor(request):
             print(code)
     except:
         return render(request,'webpages/editor.html')
-    print(code.strip())
-    return render(request,'webpages/editor.html', {"code": code.strip()})
+    soup = BeautifulSoup(code, 'html.parser')
+    html = soup.prettify()
+    return render(request,'webpages/editor.html', {"code": html})
 
 def webpage(request):
     curr_webpage = request.session["curr_webpage"]
