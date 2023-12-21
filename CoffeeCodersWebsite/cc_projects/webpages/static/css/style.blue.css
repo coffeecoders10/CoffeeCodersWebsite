@@ -3219,18 +3219,18 @@ fieldset:disabled .btn {
 
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #212529;
-  background-color: #55d6e1;
-  border-color: #4bd4e0;
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(52, 182, 193, 0.5);
-  box-shadow: 0 0 0 0.25rem rgba(52, 182, 193, 0.5);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  -webkit-box-shadow: 0 0 0 0.25rem var(--primary-color);
+  box-shadow: 0 0 0 0.25rem var(--primary-color);
 }
 
 .btn-check:checked + .btn-primary,
 .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
   color: #212529;
-  background-color: #5fd9e3;
-  border-color: #4bd4e0;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .btn-check:checked + .btn-primary:focus,

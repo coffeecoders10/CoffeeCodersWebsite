@@ -50,6 +50,7 @@ def editor(request):
             request.session.pop('curr_webpage')
             return HttpResponseRedirect('/webpages')
     curr_webpage = request.session["curr_webpage"]
+    link = "coffeecoders.pythonanywhere.com/webpages/webpage?page="+curr_webpage
     webpage = Webpages.objects.filter(name=curr_webpage)
     print(webpage, webpage[0].path)
     try:
@@ -57,11 +58,11 @@ def editor(request):
             code = file.read()
             print(code)
     except:
-        return render(request,'webpages/editor.html', {"webpage_name": curr_webpage})
+        return render(request,'webpages/editor.html', {"webpage_name": curr_webpage, "link":link})
     code = re.sub(r'\n+', '\n', code)
     soup = BeautifulSoup(code, 'html.parser')
     html = soup.prettify()
-    return render(request,'webpages/editor.html', {"code": html, "webpage_name": curr_webpage})
+    return render(request,'webpages/editor.html', {"code": html, "webpage_name": curr_webpage, "link":link})
 
 def webpage(request):
     if 'curr_webpage' in request.session:

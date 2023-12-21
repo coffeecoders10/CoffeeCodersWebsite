@@ -53,5 +53,21 @@
   });
   codeEditor.setSize("100%", "90vh");
 </script>
+
+<script>
+        function copyToClipboard() {
+            // Get the text content of the button
+            var buttonValue = document.getElementById('copyButton').value;
+            var tempInput = document.createElement('input');
+            tempInput.value = buttonValue;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Link Copied - ' + buttonValue);
+        }
+    </script>
+    
 <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">

@@ -19,8 +19,9 @@
   <div class="d-flex align-items-stretch">
     <div class="page-content form-page">
       <div class="bg-dash-dark-2 py-4">
-        <div class="container-fluid">
-          <h2 class="h5 mb-0">Single Webpage Admin</h2>
+        <div class="container-fluid d-flex justify-content-start align-items-center">
+          <img src="{% static 'images/coffeecoders.png' %}" alt="" style="max-height:50px">
+          <h2 class="h5 mb-0 px-4 text-uppercase">Single Webpage Admin</h2>
         </div>
       </div>
       <div class="container-fluid py-2">
@@ -35,7 +36,7 @@
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="h4 mb-0">Webpages</h3>
+                  <h3 class="h4 mb-0 text-uppercase">Webpages</h3>
                 </div>
                 <div class="card-body pt-0">
                   <p class="text-sm">Create or Edit Webpages</p>
@@ -50,6 +51,7 @@
                         <div class="mb-3">
                           <label class="form-label" for="exampleInputPassword1">Webpage Name</label>
                           <input class="form-control" id="exampleInputPassword1" type="text" name="webpage_name">
+                          <div class="form-text">No spaces or special characters except ' _ '</div>
                         </div>
                         <div class="col-lg d-flex justify-content-end">
                           <button class="btn btn-primary" type="submit" name="next" value="create">Create</button>
@@ -58,14 +60,12 @@
                       <div class="col-6 edit-pages mt-3">
                         <label class="form-label" for="exampleInputPassword1">Choose Webpage</label>
                         <select class="form-control bg-dark optSelect" name="curr_webpage">
-                          <option selected>Choose...</option>
+                          <option selected>Choose Webpage</option>
                           {% for i in all_webpages %}
                             <option value="{{i.name}}">{{i.name}}</option>
                           {% endfor %}
-                          <!-- <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option> -->
                         </select>
+                        <div class="form-text">Do not forget to enter password first</div>
                         <div class="col-lg d-flex justify-content-end mt-3">
                           <button class="btn btn-primary" type="submit" name="next" value="edit">Edit</button>
                         </div>
