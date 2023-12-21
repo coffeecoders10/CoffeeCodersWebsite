@@ -45,6 +45,7 @@
                     <div class="mb-2">
                       <label class="form-label" for="InputPassword" required>Password</label>
                       <input class="form-control" id="InputPassword" name="password" type="password">
+                      {{error}}
                     </div>
                     <div class="row">
                       <div class="col-6 create-pages mt-3">
@@ -60,7 +61,7 @@
                       <div class="col-6 edit-pages mt-3">
                         <label class="form-label" for="exampleInputPassword1">Choose Webpage</label>
                         <select class="form-control bg-dark optSelect" name="curr_webpage">
-                          <option selected>Choose Webpage</option>
+                          <option selected disabled>Choose Webpage</option>
                           {% for i in all_webpages %}
                             <option value="{{i.name}}">{{i.name}}</option>
                           {% endfor %}
