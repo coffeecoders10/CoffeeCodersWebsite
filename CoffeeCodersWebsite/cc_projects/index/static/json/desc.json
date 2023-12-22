@@ -13,6 +13,12 @@
             "link": "http://coffeecoders.pythonanywhere.com/classifier/"
         },
         {
+            "name": "Static Webpages",
+            "desc": "Build static webpages and host them directly",
+            "img": "1U1IOXg5WVPvZmcrG-y2jcQ0Gr0jwhHNP",
+            "link": "http://coffeecoders.pythonanywhere.com/webpages/"
+        },
+        {
             "name": "Rock-Paper-Scissors",
             "desc": "Chat Application with simple Rock Paper Scissors game invluded",
             "img": "1B1QuLAIxK61SnSqnQQHunOxJC2pD4o3j",
