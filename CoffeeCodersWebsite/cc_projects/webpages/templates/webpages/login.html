@@ -39,13 +39,13 @@
                   <h3 class="h4 mb-0 text-uppercase">Webpages</h3>
                 </div>
                 <div class="card-body pt-0">
-                  <p class="text-sm">Create or Edit Webpages</p>
+                  <p class="p-0 m-0" style="line-height:1">Create or Edit Webpages</p>
+                  <div class="form-text text-danger mb-2">{{error}}</div>
                   <form action="{% url 'login' %}" method="post">
                     {% csrf_token %}
                     <div class="mb-2">
                       <label class="form-label" for="InputPassword" required>Password</label>
                       <input class="form-control" id="InputPassword" name="password" type="password">
-                      {{error}}
                     </div>
                     <div class="row">
                       <div class="col-6 create-pages mt-3">
@@ -63,7 +63,7 @@
                         <select class="form-control bg-dark optSelect" name="curr_webpage">
                           <option selected disabled>Choose Webpage</option>
                           {% for i in all_webpages %}
-                            <option value="{{i.name}}">{{i.name}}</option>
+                          <option value="{{i.name}}">{{i.name}}</option>
                           {% endfor %}
                         </select>
                         <div class="form-text">Do not forget to enter password first</div>
@@ -74,6 +74,7 @@
                     </div>
                   </form>
                 </div>
+
               </div>
             </div>
           </div>
@@ -81,7 +82,5 @@
       </section>
     </div>
   </div>
-
 </body>
-
 </html>
