@@ -28,8 +28,6 @@ def login(request):
                 return render(request,'webpages/login.html', {"all_webpages": all_webpages,"error": "Select Valid Website Name"})
             request.session["curr_webpage"] = curr_webpage
             return HttpResponseRedirect('/webpages/editor')
-
-
     all_webpages = Webpages.objects.all()
     return render(request,'webpages/login.html', {"all_webpages": all_webpages})
 
